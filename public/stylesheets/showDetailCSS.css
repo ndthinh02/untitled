@@ -1,0 +1,134 @@
+
+a {
+    text-decoration: none;
+    text-align: center;
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+.head {
+    margin-top: 100px;
+    margin-left: 20%;
+}
+
+main {
+    margin-top: 70px;
+    background-color: #eeeeee;
+    height: auto;
+    width: 100%;
+}
+
+.content {
+    margin-left: 20%;
+    width: 60%;
+}
+
+h3 {
+    font-size: 34px;
+    margin-top: 30px;
+    font-family: "Calibri";
+}
+
+.input-icons i {
+    position: absolute;
+}
+
+.input-icons {
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+.icon {
+    text-align: right;
+    padding: 10px;
+    color: black;
+    margin-left: 50%;
+    text-align: center;
+}
+
+.input-field {
+    width: 100%;
+    padding: 10px;
+    text-align: center;
+}
+
+.box-search {
+    margin-top: 20px;
+
+}
+
+.social-icons {
+    display: flex;
+    padding: 5px;
+}
+
+.icons {
+    margin: 10px;
+    margin-top: 20px;
+}
+
+.icons-facebook {
+    color: dodgerblue;
+    margin: 10px;
+    font-size: 30px;
+    cursor: pointer;
+}
+
+.icons-instagram {
+    color: hotpink;
+    margin: 10px;
+    font-size: 30px;
+    cursor: pointer;
+}
+
+.icons-twitter {
+    color: dodgerblue;
+    margin: 10px;
+    font-size: 30px;
+    cursor: pointer;
+}
+
+.icons-reddit {
+    color: orangered;
+    margin: 10px;
+    font-size: 30px;
+    cursor: pointer;
+}
+
+.below-icons {
+    display: flex;
+}
+
+.icons-users {
+    margin-right: 20px;
+}
+
+.favorite {
+    display: flex;
+}
+
+.icon-clock {
+    margin-top: -8px;
+    display: flex;
+}
+
+.show-post
+{
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: auto;
+}
+
+.width {
+    margin-top: 40px;
+    width: 300px;
+    height: 1px;
+    background-color: gray;
+}
+
+

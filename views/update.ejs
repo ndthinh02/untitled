@@ -1,0 +1,208 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
+          integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="/stylesheets/showDetailCSS.css">
+    <link rel="stylesheet"
+          href=
+          "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://kit.fontawesome.com/fafb133810.js" crossorigin="anonymous"></script>
+
+</head>
+<body>
+<div class="container-fluid-xl">
+    <div class="head">
+        <h4><a href="#">Hình nền điện thoại đẹp cho dễ yêu của bạn</a></h4>
+    </div>
+    <main class="shadow">
+        <div class="content">
+
+            <div class="row">
+                <!--            article-->
+                <div class="col-md-7">
+                    <% var textTitle = data.title.toLowerCase() %>
+                    <h3><%= textTitle.charAt(0).toUpperCase() + textTitle.slice(1) %></h3>
+                    <div class="social-icons">
+
+                        <div class="icons"><i class="fa-solid fa-share-nodes"></i></div>
+                        <div class="icons"><p>Share</p></div>
+                        <div class="icons-facebook"><i class="fa-brands fa-facebook"></i></div>
+                        <div class="icons-instagram"><i class="fa-brands fa-instagram"></i></div>
+                        <div class="icons-twitter"><i class="fa-brands fa-twitter"></i></div>
+                        <div class="icons-reddit"><i class="fa-brands fa-reddit"></i></div>
+                    </div>
+                    <div class="below-icons">
+                        <div class="icons-users">
+                            <i class="fa-solid fa-user" style="margin-left: 12px"></i>
+                        </div>
+                        <p style="font-size: 13px">by</p>&nbsp<a href="" style="font-size: 13px">My Favorite
+                            Wallpaper</a>
+                        <div class="icon-clock">
+                            <i style="cursor: pointer" class="fa fa-clock icon" href=""></i>
+                            <p style="margin-top: 10px;font-size: 12px"><%= data.time %></p>
+                        </div>
+
+                    </div>
+
+
+                    <div class="show-post">
+
+
+                        <form style="margin-top: 20px" method="post" action="/updatePost">
+                            <input style="margin-top: 20px;width: 300px;border-radius: 20px" name="url" type="url" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Update url">
+                            <input style="margin-top: 20px;width: 300px;border-radius: 20px" name="content" type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Update content">
+                            <input style="margin-top: 20px;width: 300px;border-radius: 20px;margin-bottom: 10px" name="time" type="date" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Update time">
+                            <input style="margin-top: 20px;width: 300px;border-radius: 20px;margin-bottom: 10px" name="title" type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Update title">
+
+                            <input name = "id" hidden value="<%=data._id%>">
+                            <button class="btn btn-primary">Update</button>
+                        </form>
+
+                        <div class="card" style="width: 28rem;text-align: center">
+                            <img class="card-img-top" src="<%= data.urlImage %>" alt="Card image cap">
+                        </div>
+                        <div>
+
+                        </div>
+
+                    </div>
+
+
+                </div>
+                <!--            article-->
+                <!--                aside-->
+                <div class="col-sm">
+
+                    <form>
+                        <div class="row">
+                            <div class="box-search">
+                                <svg width="4" height="20">
+                                    <rect width="4" height="100" style="fill:dodgerblue;"/>
+                                    o
+                                </svg>
+                            </div>
+                            <h5 style="margin-left: 10px;margin-top: 14px" for="exampleInputEmail1">Search this
+                                blog</h5>
+
+                            <div class="input-icons">
+                                <i style="cursor: pointer" class="fa fa-search icon" href="">
+                                </i>
+                                <input style="border-radius: 20px;width: 320px;" type="text" class="form-control" --
+                                       id="exampleInputEmail1" aria-describedby="emailHelp"
+                                       placeholder="Search this blog">
+                            </div>
+                            <div class="width"></div>
+                        </div>
+                    </form>
+                    <form style="margin-top: 40px">
+                        <div class="row">
+                            <div class="box-search">
+                                <svg width="4" height="20">
+                                    <rect width="4" height="100" style="fill:dodgerblue;"/>
+                                    o
+                                </svg>
+                            </div>
+                            <h5 style="margin-left: 10px;margin-top: 14px" for="exampleInputEmail1">
+                                Labels</h5>
+
+                            <div class="input-icons">
+
+                                </i>
+                                <div>
+                                    <input style="border-radius: 20px;width: 200px;" class="form-control" type="button"
+                                           value="HÌNH NỀN ĐỘNG">
+                                </div>
+
+                                <div style="display: flex">
+                                    <input style="border-radius: 20px;width: 100px;margin-top: 20px"
+                                           class="form-control"
+                                           type="button"
+                                           value="ANIME">
+                                    <input style="border-radius: 20px;width: 100px;margin-top: 20px;margin-left: 20px"
+                                           class="form-control"
+                                           type="button"
+                                           value="Titan">
+                                </div>
+
+                                <div class="width"></div>
+                            </div>
+
+                        </div>
+                    </form>
+                    <div class="popular-post">
+                        <div class="row">
+                            <div class="box-search">
+                                <svg width="4" height="20">
+                                    <rect width="4" height="100" style="fill:dodgerblue;"/>
+                                    o
+                                </svg>
+                            </div>
+                            <h5 style="margin-left: 10px;margin-top: 14px" for="exampleInputEmail1">Popular Post</h5>
+
+                        </div>
+                        <div class="content-popular-post">
+                            <div class="row">
+                                <div class="col-sm-1">
+                                    <div class="image">
+                                        <img class="rounded-circle" src="<%= data.urlImage %>" width="50px"
+                                             height="50px">
+                                    </div>
+                                </div>
+                                <div class="col">
+                                    <div class="title" style="margin-left: 20px;margin-top: 10px;">
+                                        <h4 style="font-size: 13px"><%= data.title %></h4></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--               aside-->
+            </div>
+        </div>
+    </main>
+    <!--    comment-->
+    <div class="row">
+        <div class="col-sm-5 col-md-6 col-12 pb-4">
+            <h1>Comments</h1>
+            <div class="comment mt-4 text-justify float-left"><img src="https://i.imgur.com/yTFUilP.jpg" alt=""
+                                                                   class="rounded-circle" width="40" height="40">
+                <h4>Jhon Doe</h4> <span>- 20 October, 2018</span> <br>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Accusamus numquam assumenda hic aliquam
+                    vero sequi velit molestias doloremque molestiae dicta?</p>
+            </div>
+
+        </div>
+        <div class="col-lg-4 col-md-5 col-sm-4 offset-md-1 offset-sm-1 col-12 mt-4">
+            <form id="algin-form" method="post" action="/addComment" class="addComment">
+                <div class="form-group">
+                    <h4>Leave a comment</h4> <label for="message">Message</label> <textarea name="msg" id="" msg
+                                                                                            cols="30" rows="5"
+                                                                                            class="form-control">
+                "></textarea>
+                </div>
+                <div class="form-group"><label for="name">Name</label> <input type="text" name="name" id="fullname"
+                                                                              class="form-control"></div>
+                <div class="form-group"><label for="email">Email</label> <input type="text" name="email" id="email"
+                                                                                class="form-control"></div>
+                <div class="form-group">
+                    <p class="text-secondary">If you have a <a href="#" class="alert-link">gravatar account</a> your
+                        address will be used to display your profile picture.</p>
+                </div>
+                <div class="form-inline"><input type="checkbox" name="check" id="checkbx" class="mr-1"> <label
+                            for="subscribe">Subscribe me to the newlettter</label></div>
+                <div class="form-group">
+                    <button type="button" id="post" class="btn">Post Comment</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+</div>
+</body>
+</html>
