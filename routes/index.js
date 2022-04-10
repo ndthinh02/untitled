@@ -144,11 +144,11 @@ router.post('/download-image', (req, res) => {
 
 })
 router.get('/getAll', function (req, res) {
-
+    res.header('Access-Control-Allow-Origin', '*');
+    res.header('Access-Control-Allow-Methods', 'GET');
     Post.find({}, (err, data) => {
         res.send((data))
-        res.header('Access-Control-Allow-Origin', '*');
-        res.header('Access-Control-Allow-Methods', 'GET');
+
     })
 })
 
