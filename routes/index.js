@@ -147,8 +147,10 @@ router.get('/getAll', function (req, res) {
     Post.find({}, (err, data) => {
 
 
+
         res.render('getAll', {data: data});
-        const json = JSON.parse(data)
+
+
     })
 })
 
