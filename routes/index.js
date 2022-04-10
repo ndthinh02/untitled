@@ -10,6 +10,7 @@ const imageDownloader = require('node-image-downloader')
 // router.use(formidable());
 var db = 'mongodb+srv://admin:ndthinh1410@cluster0.ikuee.mongodb.net/testmongo?retryWrites=true&w=majority'
 var mongo = require('mongoose')
+const {json} = require("express");
 
 mongo.connect(db).catch(err => {
     console.log("Da xay ra loi" + err)
@@ -145,12 +146,7 @@ router.post('/download-image', (req, res) => {
 router.get('/getAll', function (req, res) {
 
     Post.find({}, (err, data) => {
-
-
-
-        res.render('getAll', {data: data});
-
-
+        res.send((data))
     })
 })
 
