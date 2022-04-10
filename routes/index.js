@@ -147,6 +147,8 @@ router.get('/getAll', function (req, res) {
 
     Post.find({}, (err, data) => {
         res.send((data))
+        res.header('Access-Control-Allow-Origin', '*');
+        res.header('Access-Control-Allow-Methods', 'GET');
     })
 })
 
