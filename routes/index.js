@@ -108,17 +108,17 @@ router.post("/updatePost", (req, res) => {
 router.post("/delete", (req, res) => {
     var id = req.body.idDelete;
     Post.findByIdAndRemove(id, (err, data) => {
-        res.render("index")
+        res.render("index",{data:data})
     })
 })
-router.post('/showDetail', function (req, res) {
-    var id = req.body.id;
-    Post.findById(id, (err, data) => {
-        res.render("showDetail", {data: data})
-        // console.log(data)
-        // console.log(id)
+    router.post('/showDetail', function (req, res) {
+        var id = req.body.id;
+        Post.findById(id, (err, data) => {
+            res.render("showDetail", {data: data})
+            // console.log(data)
+            // console.log(id)
+        })
     })
-})
 // takePhoto
 router.post('/download-image', (req, res) => {
     const date_ob = Date.now();
